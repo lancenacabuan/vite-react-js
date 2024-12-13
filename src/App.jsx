@@ -1,12 +1,12 @@
 // src/App.jsx
 import React, { useState } from "react";
 import { CssBaseline, Box } from "@mui/material";
-import Header from "./components/HeaderComponent";
-import Sidebar from "./components/SidebarComponent";
+import HeaderComponent from "./components/HeaderComponent";
+import SidebarComponent from "./components/SidebarComponent";
 import ContentComponent from "./components/ContentComponent";
 
 const App = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(true); // State to manage sidebar open/close
+  const [sidebarOpen, setSidebarOpen] = useState(true);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -15,8 +15,8 @@ const App = () => {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <Header toggleSidebar={toggleSidebar} />
-      <Sidebar open={sidebarOpen} />
+      <HeaderComponent toggleSidebar={toggleSidebar} />
+      <SidebarComponent open={sidebarOpen} />
       <ContentComponent />
     </Box>
   );
