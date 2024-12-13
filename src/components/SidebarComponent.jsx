@@ -36,11 +36,7 @@ const Sidebar = ({ open }) => {
       <Box sx={{ overflow: "auto" }}>
         <List>
           {/* Main Collapsible Item with Font Awesome Icon */}
-          <ListItem
-            button
-            onClick={handleToggleCollapse}
-            sx={{ cursor: "pointer" }}
-          >
+          <ListItem onClick={handleToggleCollapse} sx={{ cursor: "pointer" }}>
             <ListItemIcon>
               <FontAwesomeIcon icon={faMoneyBills} />
             </ListItemIcon>
@@ -51,19 +47,19 @@ const Sidebar = ({ open }) => {
           {/* Collapsible Children */}
           <Collapse in={!collapsed} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItem button sx={{ pl: 4, cursor: "pointer" }}>
+              <ListItem sx={{ pl: 4, cursor: "pointer" }}>
                 <ListItemIcon>
                   <ChevronRight />
                 </ListItemIcon>
                 <ListItemText primary="Cash Advance" />
               </ListItem>
-              <ListItem button sx={{ pl: 4, cursor: "pointer" }}>
+              <ListItem sx={{ pl: 4, cursor: "pointer" }}>
                 <ListItemIcon>
                   <ChevronRight />
                 </ListItemIcon>
                 <ListItemText primary="Liquidation / Reimbursement" />
               </ListItem>
-              <ListItem button sx={{ pl: 4, cursor: "pointer" }}>
+              <ListItem sx={{ pl: 4, cursor: "pointer" }}>
                 <ListItemIcon>
                   <ChevronRight />
                 </ListItemIcon>
