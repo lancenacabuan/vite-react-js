@@ -1,5 +1,7 @@
 // src/components/Sidebar.jsx
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoneyBills } from "@fortawesome/free-solid-svg-icons"; // Import the icon you need
 import {
   Drawer,
   List,
@@ -10,12 +12,7 @@ import {
   Toolbar,
   Box,
 } from "@mui/material";
-import {
-  Inbox,
-  ExpandLess,
-  ExpandMore,
-  ChevronRight,
-} from "@mui/icons-material";
+import { ExpandLess, ExpandMore, ChevronRight } from "@mui/icons-material";
 
 const drawerWidth = 240;
 
@@ -39,10 +36,11 @@ const Sidebar = ({ open }) => {
       <Toolbar />
       <Box sx={{ overflow: "auto" }}>
         <List>
-          {/* Main Collapsible Item */}
+          {/* Main Collapsible Item with Font Awesome Icon */}
           <ListItem button onClick={handleToggleCollapse}>
             <ListItemIcon>
-              <Inbox />
+              <FontAwesomeIcon icon={faMoneyBills} size="2x" />{" "}
+              {/* Makes icon 2x larger */}
             </ListItemIcon>
             <ListItemText primary="Petty Cash" />
             {collapsed ? <ExpandLess /> : <ExpandMore />}
