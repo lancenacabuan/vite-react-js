@@ -1,4 +1,3 @@
-// src/components/Header.jsx
 import React from "react";
 import { AppBar, Toolbar, Typography, IconButton } from "@mui/material";
 import { Menu } from "@mui/icons-material";
@@ -15,12 +14,12 @@ const Header = ({ toggleSidebar }) => {
           edge="start"
           color="inherit"
           aria-label="menu"
-          sx={{ mr: 2 }}
+          sx={{ mr: 2, cursor: "pointer" }}
           onClick={toggleSidebar}
         >
           <Menu />
         </IconButton>
-        <Typography variant="h6" noWrap>
+        <Typography variant="h6" noWrap sx={{ cursor: "pointer" }}>
           Expenses Management System
         </Typography>
       </Toolbar>

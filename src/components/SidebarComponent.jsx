@@ -1,7 +1,6 @@
-// src/components/Sidebar.jsx
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoneyBills } from "@fortawesome/free-solid-svg-icons"; // Import the icon you need
+import { faMoneyBills } from "@fortawesome/free-solid-svg-icons";
 import {
   Drawer,
   List,
@@ -37,10 +36,13 @@ const Sidebar = ({ open }) => {
       <Box sx={{ overflow: "auto" }}>
         <List>
           {/* Main Collapsible Item with Font Awesome Icon */}
-          <ListItem button onClick={handleToggleCollapse}>
+          <ListItem
+            button
+            onClick={handleToggleCollapse}
+            sx={{ cursor: "pointer" }}
+          >
             <ListItemIcon>
-              <FontAwesomeIcon icon={faMoneyBills} size="2x" />{" "}
-              {/* Makes icon 2x larger */}
+              <FontAwesomeIcon icon={faMoneyBills} />
             </ListItemIcon>
             <ListItemText primary="Petty Cash" />
             {collapsed ? <ExpandLess /> : <ExpandMore />}
@@ -49,19 +51,19 @@ const Sidebar = ({ open }) => {
           {/* Collapsible Children */}
           <Collapse in={!collapsed} timeout="auto" unmountOnExit>
             <List component="div" disablePadding>
-              <ListItem button sx={{ pl: 4 }}>
+              <ListItem button sx={{ pl: 4, cursor: "pointer" }}>
                 <ListItemIcon>
                   <ChevronRight />
                 </ListItemIcon>
                 <ListItemText primary="Cash Advance" />
               </ListItem>
-              <ListItem button sx={{ pl: 4 }}>
+              <ListItem button sx={{ pl: 4, cursor: "pointer" }}>
                 <ListItemIcon>
                   <ChevronRight />
                 </ListItemIcon>
                 <ListItemText primary="Liquidation / Reimbursement" />
               </ListItem>
-              <ListItem button sx={{ pl: 4 }}>
+              <ListItem button sx={{ pl: 4, cursor: "pointer" }}>
                 <ListItemIcon>
                   <ChevronRight />
                 </ListItemIcon>
