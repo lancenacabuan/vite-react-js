@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import { ExpandLess, ExpandMore, ChevronRight } from "@mui/icons-material";
 
-const drawerWidth = 240;
+const drawerWidth = 350;
 
 const Sidebar = ({ open }) => {
   const [collapsed, setCollapsed] = React.useState(false);
